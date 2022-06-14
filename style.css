@@ -4,16 +4,23 @@
     box-sizing: border-box;
     margin: 0;
     font-family : 'Roboto Mono', monospace;
+    padding: 0; 
+    scroll-behavior: smooth; 
 }
 
 body{
     background: black;
     color: white; 
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; */
 }
-
+h1{
+    text-align: center;
+}
 .watch{
     background: #011c2c;
-    text-align: center;
     width: 100%;
     max-width: 500px;
     margin : 5rem auto;
@@ -25,10 +32,6 @@ body{
     display: flex;
     height: 100px;
     align-items: center;
-
-}
-
-.time{
     background-color:transparent;
     padding: 20px;
     font-size: 80px;
@@ -57,4 +60,28 @@ body{
     color: white;
     border: 1px solid white;
     background : none!important;
+}
+button{
+    --bs-btn-padding-y: 0.4rem!important;
+    --bs-btn-padding-x: 1.70rem!important;
+    --bs-btn-font-size: 1.5rem!important;
+}
+@media (max-width: 500px){
+    .time{
+        font-size: 12vw;
+        height : 74px;
+        max-width: fit-content;
+        margin-left: 20px;
+    }
+    .timetext{
+        font-size: 4.4vw;
+        padding-left:24px;
+        height: 40px;
+        justify-content: space-evenly;
+    }
+    button{
+    --bs-btn-padding-x: 0.75rem!important;
+    --bs-btn-padding-y: 0.375rem!important;
+    --bs-btn-font-size: 1rem!important;
+    }
 }
